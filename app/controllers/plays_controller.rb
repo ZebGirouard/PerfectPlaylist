@@ -1,6 +1,7 @@
 require 'csv'
 class PlaysController < ApplicationController
 	skip_before_filter  :verify_authenticity_token
+
 	def home
 =begin
 		@song = []
@@ -30,6 +31,19 @@ class PlaysController < ApplicationController
 	end
 
 	def create
+		if request.post?
+	    activated_ids = params[:activated].collect {|id| id.to_i} if params[:activated]
+	    seen_ids = params[:seen].collect {|id| id.to_i} if params[:seen]
+
+	    if activated_ids
+	      seen_ids.each do |id|
+	        r = Play.find_by_id(id)
+	        r.activated = activated_ids.include?(id)
+	        r.save
+	      end
+	    end
+	  end
+	  @r = r
 		@string = "Please Refresh Page"
 		#flash[:success] = "Songs added!"
 		CSV.open("./songlist.csv", "wb") do |csv|

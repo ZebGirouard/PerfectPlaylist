@@ -22,11 +22,15 @@
 		<% end %>
 	</tbody>
 </table>
-<input class="ok" onclick="alert('Hello world!');" type="button" value="Greeting" />
-<%= button_to "Some Button", plays_path, :method=> "post" %>
-<div class="checkbox">
-  <label>
-    <input type="checkbox" value="">
-    Song One
-  </label>
+
+<%= button_to "Add Songs", plays_path, :method=> "post" %>
+
+<% @plays.each do |play|%>
+	<div>
+  <%= hidden_field_tag('seen[]', play[:id]) -%>
+  <%= check_box_tag 'activated[]', play[:id] -%>
+      <%= play["title"] %>
+    <%= " / " %>
+    <%= play["artist"] %>
 </div>
+<% end %>
