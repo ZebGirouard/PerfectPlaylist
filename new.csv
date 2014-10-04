@@ -1,0 +1,5 @@
+id,title,artist,energy,valence,danceability,rank,created_at,updated_at
+1,Turn Down for What,DJ Snake,0.2,0.3,0.4,1,2014-10-04 12:19:17 UTC,2014-10-04 12:19:17 UTC
+2,Turn Down for Whom,DJ Rabbit,0.3,0.4,0.5,2,2014-10-04 12:19:17 UTC,2014-10-04 12:19:17 UTC
+3,Turn Down for Which,DJ Mongoose,0.4,0.5,0.6,3,2014-10-04 12:19:17 UTC,2014-10-04 12:19:17 UTC
+4,Turn Down for Where,DJ Hippopotamus,0.5,0.6,0.7,4,2014-10-04 12:19:17 UTC,2014-10-04 12:19:17 UTC

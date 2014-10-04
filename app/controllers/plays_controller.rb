@@ -1,3 +1,4 @@
+require 'csv'
 class PlaysController < ApplicationController
 	def home
 =begin
@@ -23,6 +24,14 @@ class PlaysController < ApplicationController
 	end
 
 	def create
+		@string = "Please Refresh Page"
 		flash[:success] = "Songs added!"
+		CSV.open("./new.csv", "wb") do |csv|
+		  csv << Song.attribute_names
+		  Song.all.each do |song|
+		    csv << song.attributes.values
+		  end
+		end
+		redirect_to root_path
 	end
 end
