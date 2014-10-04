@@ -32,10 +32,16 @@ class PlaysController < ApplicationController
 	def create
 		@string = "Please Refresh Page"
 		#flash[:success] = "Songs added!"
-		CSV.open("./new.csv", "wb") do |csv|
-		  csv << Song.attribute_names
-		  Song.all.each do |song|
-		    csv << song.attributes.values
+		CSV.open("./songlist.csv", "wb") do |csv|
+		  csv << ["rank", "title", "artist", "energy", "danceability", "valence", "path"]
+		  @plays.each do |song|
+		    csv << [song.rank.value, song.title.value, song.artist.value, song.energy.value, song.danceability.value, song.path.values]
+		  end
+		end
+		CSV.open("./targetlist.csv", "wb") do |csv|
+		  csv << ["rank", "target_e", "target_d", "target_v"]
+		  @plays.each do |target|
+		    csv << [target["rank"], target["target_e"], target["target_d"], target["target_v"]]
 		  end
 		end
 		redirect_to root_path
