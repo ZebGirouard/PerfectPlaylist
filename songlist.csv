@@ -1,1 +1,11 @@
 rank,title,artist,energy,danceability,valence,path
+1,Crank That,Soulja Boy,0.684,0.691,root/songs/Soulja_Boy_Crank_That.mp3
+2,Shake it Off,Taylor Swift,0.802,0.643,root/songs/Taylor_Swift_Shake_It_Off.mp3
+3,Living in America,James Brown,0.824,0.764,root/songs/James_Brown_Living_In_America.mp3
+4,Tsunami,DVBBS,0.972,0.693,root/songs/DVBBS_Tsunami.mp3
+5,Danza Kuduro,Don Lore V,0.934,0.698,root/songs/Don_Lore_V_Danza_Kuduro.mp3
+6,Keep Your Head Up,Andy Grammer,0.772,0.671,root/songs/Andy_Grammer_Keep_Your_Head_Up.mp3
+7,Roxanne,Police,0.872,0.635,root/songs/Police_Roxanne.mp3
+8,A Thousand Miles,Vanessa Carlton,0.518,0.53,root/songs/Vanessa_Carlton_A_Thousand_Miles.mp3
+9,Chasing Cars,Snow Patrol,0.543,0.541,root/songs/Snow_Patrol_Chasing_Cars.mp3
+10,Dont Stop Believin,Journey,0.89,0.358,root/songs/Journey_Dont_Stop_Believin.mp3

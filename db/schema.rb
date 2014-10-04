@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20141004043310) do
     t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string    "path"
   end
 
   create_table "users", force: true do |t|

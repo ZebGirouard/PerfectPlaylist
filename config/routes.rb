@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root  'plays#home'
   resources :plays
 
-  match '/too_loud' => 'plays#curl_get_example', via: :get
+  match '/too_loud' => 'plays#too_loud_flag', via: :get
   match '/too_loud' => 'plays#too_loud_flag', via: :post
 
   match '/csv_read' => 'plays#csv_read_flag', via: :post
