@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141004043310) do
     t.float    "current_sound"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rank"
   end
 
   create_table "plays", force: true do |t|
