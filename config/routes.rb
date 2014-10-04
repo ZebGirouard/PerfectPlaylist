@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root  'plays#home'
   resources :plays
+
+  match '/too_loud' => 'plays#curl_get_example', via: :get
+  match '/too_loud' => 'plays#too_loud_flag', via: :post
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

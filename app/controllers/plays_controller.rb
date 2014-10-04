@@ -1,5 +1,6 @@
 require 'csv'
 class PlaysController < ApplicationController
+	skip_before_filter  :verify_authenticity_token
 	def home
 =begin
 		@song = []
@@ -34,4 +35,14 @@ class PlaysController < ApplicationController
 		end
 		redirect_to root_path
 	end
+
+
+	def curl_get_example
+    render text: 'Thanks for sending a GET request with cURL!'
+  	end
+
+  	def too_loud_flag
+    render text: "Thanks for sending a POST request with cURL! Payload: #{request.body.read}"
+  	end
+
 end
