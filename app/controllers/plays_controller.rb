@@ -16,6 +16,11 @@ class PlaysController < ApplicationController
 			@play_full["song"] = Song.find_by_rank(play["rank"])
 			@play_full["title"] = @play_full["song"]["title"]
 			@play_full["artist"] = @play_full["song"]["artist"]
+
+			@play_full["environment"] = Environment.find_by_rank(play["rank"])
+			@play_full["target_e"] = @play_full["environment"]["target_e"]
+			@play_full["target_d"] = @play_full["environment"]["target_d"]
+			@play_full["target_v"] = @play_full["environment"]["target_v"]
 			@plays << @play_full
 		end
 		#Play.find_each do |play|
@@ -25,7 +30,7 @@ class PlaysController < ApplicationController
 
 	def create
 		@string = "Please Refresh Page"
-		flash[:success] = "Songs added!"
+		#flash[:success] = "Songs added!"
 		CSV.open("./new.csv", "wb") do |csv|
 		  csv << Song.attribute_names
 		  Song.all.each do |song|
