@@ -1,0 +1,25 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Track Num</th>
+			<th>Title</th>
+			<th>Artist</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @plays.each do |play|%>
+		<tr>
+			<td>
+				<%= play["rank"] %>
+			</td>
+			<td>
+				<%= play["title"] %>
+			</td>
+			<td>
+				<%= play["artist"] %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= button_to "Add Songs", play_index_path, :class => "button", :method=> "post" %>

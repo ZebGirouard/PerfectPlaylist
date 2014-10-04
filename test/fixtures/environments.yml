@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  target_e: 1.5
+  target_v: 1.5
+  target_d: 1.5
+  target_light: 1.5
+  target_sound: 1.5
+  current_sound: 1.5
+
+two:
+  target_e: 1.5
+  target_v: 1.5
+  target_d: 1.5
+  target_light: 1.5
+  target_sound: 1.5
+  current_sound: 1.5
